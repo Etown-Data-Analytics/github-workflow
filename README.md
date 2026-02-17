@@ -32,12 +32,13 @@ git checkout -b mybranch
 gitGraph
     commit id: "Initial commit"
     commit id: "Add data file"
+    commit id: "Add python script"
+    
     branch mybranch
     commit id: "Update analysis"
     commit id: "Fix formatting"
     checkout main
     merge mybranch id: "Merge PR"
-    commit id: "Next feature..."
 ```
 
 ### Commit
