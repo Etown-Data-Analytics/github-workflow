@@ -19,6 +19,14 @@ A **clone** is a local copy of a repository that already exists remotely (on Git
 ```bash
 git clone https://github.com/Etown-Data-Analytics/github-workflow.git
 ```
+### Branch
+
+A **branch** lets you work on changes without affecting the main codebase. You can create a branch, make commits on it, and merge it back when your work is ready.
+
+```bash
+git checkout -b mybranch
+# make changes, then commit...
+```
 
 ### Commit
 
@@ -29,18 +37,10 @@ git add analyze_sales.py
 git commit -m "Add daily revenue breakdown"
 ```
 
-### Branch
-
-A **branch** lets you work on changes without affecting the main codebase. You can create a branch, make commits on it, and merge it back when your work is ready.
-
-```bash
-git checkout -b my-feature
-# make changes, then commit...
-```
-
 ### Fork
 
 A **fork** is a personal copy of someone else's repository under your own GitHub account. You can make changes in your fork without affecting the original project.
+
 
 ### Pull Request
 
