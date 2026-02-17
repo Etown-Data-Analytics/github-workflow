@@ -1,0 +1,16 @@
+date,product,category,quantity,price,revenue
+2024-01-01,Laptop,Electronics,5,999.99,4999.95
+2024-01-02,Mouse,Electronics,15,29.99,449.85
+2024-01-03,Notebook,Stationery,30,4.99,149.70
+2024-01-04,Desk Chair,Furniture,8,249.99,1999.92
+2024-01-05,USB Cable,Electronics,25,9.99,249.75
+2024-01-06,Pen Set,Stationery,40,12.99,519.60
+2024-01-07,Monitor,Electronics,10,299.99,2999.90
+2024-01-08,Desk Lamp,Furniture,12,39.99,479.88
+2024-01-09,Keyboard,Electronics,18,79.99,1439.82
+2024-01-10,Whiteboard,Stationery,6,89.99,539.94
+2024-01-11,Office Chair,Furniture,7,349.99,2449.93
+2024-01-12,Webcam,Electronics,14,59.99,839.86
+2024-01-13,Paper Ream,Stationery,50,8.99,449.50
+2024-01-14,Standing Desk,Furniture,4,599.99,2399.96
+2024-01-15,Headphones,Electronics,20,149.99,2999.80
