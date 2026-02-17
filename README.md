@@ -28,6 +28,18 @@ git checkout -b mybranch
 # make changes, then commit...
 ```
 
+```mermaid
+gitGraph
+    commit id: "Initial commit"
+    commit id: "Add data file"
+    branch mybranch
+    commit id: "Update analysis"
+    commit id: "Fix formatting"
+    checkout main
+    merge mybranch id: "Merge PR"
+    commit id: "Next feature..."
+```
+
 ### Commit
 
 A **commit** is a snapshot of your changes. Think of it like taking a photo of your project at a specific point in time. Each commit is saved in the project's history so you can always go back.
