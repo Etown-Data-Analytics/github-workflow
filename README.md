@@ -1,172 +1,101 @@
-# 📊 GitHub Workflow Template - Sales Data Analytics
+# GitHub Workflow -- Sales Data Analytics
 
-[![CI - Lint and Test](https://github.com/Etown-Data-Analytics/github-workflow/actions/workflows/ci.yml/badge.svg)](https://github.com/Etown-Data-Analytics/github-workflow/actions/workflows/ci.yml)
-[![Run Data Analysis](https://github.com/Etown-Data-Analytics/github-workflow/actions/workflows/analyze.yml/badge.svg)](https://github.com/Etown-Data-Analytics/github-workflow/actions/workflows/analyze.yml)
+This project is a hands-on exercise for learning **Git** and **GitHub workflows** using a simple Python data analytics script.
 
-A template repository demonstrating GitHub workflows and best practices using a simple Python data analytics project. Perfect for learning GitHub Actions, CI/CD, and collaborative development workflows.
+## Git Concepts
 
-## 🎯 Purpose
+Git is a **distributed version control system** that tracks the history of changes as people collaborate on projects. Unlike centralized systems, every developer has a complete copy of the project and its history on their own machine.
 
-This template demonstrates:
-- ✅ **GitHub Actions workflows** for CI/CD
-- ✅ **Automated testing** with pytest
-- ✅ **Code quality checks** with flake8
-- ✅ **Python data analytics** using pandas
-- ✅ **Project structure** best practices
-- ✅ **Documentation** standards
+For more details, see the [official GitHub docs on Git](https://docs.github.com/en/get-started/using-git/about-git).
 
-## 📁 Project Structure
+### Repository
+
+A **repository** (or "repo") is the entire collection of files and folders in a project, along with each file's revision history. This project is a repository.
+
+### Clone
+
+A **clone** is a local copy of a repository that already exists remotely (on GitHub). Cloning downloads all files, history, and branches so you can work on the project locally.
+
+```bash
+git clone https://github.com/Etown-Data-Analytics/github-workflow.git
+```
+
+### Commit
+
+A **commit** is a snapshot of your changes. Think of it like taking a photo of your project at a specific point in time. Each commit is saved in the project's history so you can always go back.
+
+```bash
+git add analyze_sales.py
+git commit -m "Add daily revenue breakdown"
+```
+
+### Branch
+
+A **branch** lets you work on changes without affecting the main codebase. You can create a branch, make commits on it, and merge it back when your work is ready.
+
+```bash
+git checkout -b my-feature
+# make changes, then commit...
+```
+
+### Fork
+
+A **fork** is a personal copy of someone else's repository under your own GitHub account. You can make changes in your fork without affecting the original project.
+
+### Pull Request
+
+A **pull request** (PR) is how you propose changes from your branch (or fork) back to the main project. Other team members can review your changes, leave comments, and approve them before they are merged.
+
+## Workflow Summary
+
+1. **Clone** the repo (or **fork** it first if you don't have write access)
+2. Create a **branch** for your work
+3. Make changes and **commit** them
+4. Push your branch to GitHub
+5. Open a **pull request** for review
+6. After approval, **merge** your changes into `main`
+
+## Project Structure
 
 ```
 github-workflow/
-├── .github/
-│   └── workflows/
-│       ├── ci.yml              # Continuous Integration workflow
-│       └── analyze.yml         # Data analysis workflow
 ├── data/
-│   └── sales_data.csv          # Sample sales data
-├── tests/
-│   ├── __init__.py
-│   └── test_analyze_sales.py  # Unit tests
-├── analyze_sales.py            # Main analysis script
-├── requirements.txt            # Python dependencies
-├── .gitignore                  # Git ignore rules
-└── README.md                   # This file
+│   └── sales_data.csv      # Sample sales data
+├── analyze_sales.py         # Main analysis script
+├── requirements.txt         # Python dependencies
+├── .gitignore
+└── README.md
 ```
 
-## 🚀 Getting Started
+## Getting Started
 
-### Prerequisites
-
-- Python 3.9 or higher
-- pip (Python package manager)
-
-### Installation
-
-1. **Clone the repository** (or use as template):
+1. **Clone the repository:**
    ```bash
    git clone https://github.com/Etown-Data-Analytics/github-workflow.git
    cd github-workflow
    ```
 
-2. **Create a virtual environment** (recommended):
+2. **Create a virtual environment (recommended):**
    ```bash
    python -m venv venv
    source venv/bin/activate  # On Windows: venv\Scripts\activate
    ```
 
-3. **Install dependencies**:
+3. **Install dependencies:**
    ```bash
    pip install -r requirements.txt
    ```
 
-## 💻 Usage
+4. **Run the analysis:**
+   ```bash
+   python analyze_sales.py
+   ```
 
-### Running the Analysis
+## What the Script Does
 
-Basic usage:
-```bash
-python analyze_sales.py
-```
+The script reads `data/sales_data.csv` and prints:
 
-With detailed output:
-```bash
-python analyze_sales.py --verbose
-```
-
-Using custom data file:
-```bash
-python analyze_sales.py --data path/to/your/data.csv
-```
-
-### Running Tests
-
-Run all tests:
-```bash
-pytest tests/
-```
-
-Run tests with coverage:
-```bash
-pytest tests/ -v --cov=. --cov-report=term-missing
-```
-
-### Code Quality Checks
-
-Run linting:
-```bash
-flake8 . --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics
-```
-
-## 📊 Sample Output
-
-The analysis script provides:
-- **Summary Statistics**: Total revenue, transactions, items sold
-- **Category Analysis**: Revenue breakdown by product category
-- **Top Products**: Best-selling products by revenue
-- **Daily Breakdown**: Daily revenue trends (with --verbose flag)
-
-## 🔄 GitHub Workflows
-
-### CI Workflow (`ci.yml`)
-
-Triggers on:
-- Push to `main` or `develop` branches
-- Pull requests to `main` or `develop` branches
-
-Actions:
-1. **Lint**: Check code quality with flake8
-2. **Test**: Run tests on Python 3.9, 3.10, and 3.11
-3. **Coverage**: Generate and upload coverage reports
-
-### Data Analysis Workflow (`analyze.yml`)
-
-Triggers on:
-- Push to `main` branch
-- Daily schedule (9 AM UTC)
-- Manual workflow dispatch
-
-Actions:
-1. Run the sales analysis
-2. Generate analysis report
-3. Upload results as artifacts
-
-## 🤝 Contributing
-
-We welcome contributions! Please see [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines.
-
-### Quick Start for Contributors
-
-1. Fork the repository
-2. Create a feature branch (`git checkout -b feature/amazing-feature`)
-3. Make your changes
-4. Run tests (`pytest tests/`)
-5. Commit your changes (`git commit -m 'Add amazing feature'`)
-6. Push to the branch (`git push origin feature/amazing-feature`)
-7. Open a Pull Request
-
-## 📚 Learning Resources
-
-- [GitHub Actions Documentation](https://docs.github.com/en/actions)
-- [Python pandas Documentation](https://pandas.pydata.org/docs/)
-- [pytest Documentation](https://docs.pytest.org/)
-- [Git Workflow Guide](https://www.atlassian.com/git/tutorials/comparing-workflows)
-
-## 📝 License
-
-This project is open source and available under the MIT License.
-
-## 🎓 Educational Use
-
-This template is designed for educational purposes. Feel free to:
-- Use it as a starting point for your projects
-- Modify it to fit your needs
-- Share it with others learning GitHub workflows
-
-## 📧 Contact
-
-For questions or suggestions, please open an issue on GitHub.
-
----
-
-**Happy coding and analyzing! 📊✨**
+- **Summary** -- total revenue, transaction count, items sold, average transaction value
+- **Revenue by Category** -- which product categories earn the most
+- **Top 5 Products** -- highest-revenue individual products
+- **Daily Revenue** -- revenue broken down by date
