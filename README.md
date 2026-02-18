@@ -25,7 +25,7 @@ A **branch** lets you work on changes without affecting the main codebase. You c
 
 ```bash
 git checkout -b mybranch
-# make changes, then commit...
+# make changes, then commit..
 ```
 
 ```mermaid
